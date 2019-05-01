@@ -10,14 +10,14 @@ def hello():
     return "Test"
 
 class Prediction(Resource):
-    def get(self):
+    def get(self, songname):
         return songname
 
 class haha(Resource):
     def get(self):
         return {"hehe":"hoho"}
 
-api.add_resource(Prediction, '/predict/?songname=/')
+api.add_resource(Prediction, '/predict/<str:songname>')
 api.add_resource(haha, '/laugh')
 
 if __name__ == '__main__':
