@@ -11,7 +11,7 @@ def hello():
 
 class Prediction(Resource):
     def get(self):
-    	args = request.args #retrieve args from query string
+        args = request.args #retrieve args from query string
         return args
 
 class haha(Resource):
