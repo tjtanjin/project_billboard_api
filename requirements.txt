@@ -28,7 +28,9 @@ pytz==2019.1
 regex==2019.4.10
 requests==2.21.0
 scipy==1.2.1
+scikit-learn==0.20.3
 six==1.12.0
 soupsieve==1.9.1
+xgboost==0.82
 urllib3==1.24.1
 Werkzeug==0.15.2

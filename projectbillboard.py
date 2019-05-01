@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restful import Api, Resource
 from flask_jsonpify import jsonify
 from flask_cors import CORS
+from submodules.predictor import predict_popularity
 
 app = Flask(__name__)
 api = Api(app)
@@ -13,8 +14,8 @@ def hello():
 
 class Prediction(Resource):
     def get(self, songname):
-        output = songname + "hihi"
-        return output
+        popularity = predict_popularity(songname)
+        return popularity
 
 class haha(Resource):
     def get(self):
