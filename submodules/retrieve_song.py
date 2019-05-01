@@ -3,7 +3,7 @@ import pandas as pd
 from requests import get, post
 
 # post Client Credentials to Spotify's Token API to obtain Token
-with open("../token/token.json", "r") as token_file:
+with open("./token/token.json", "r") as token_file:
     token_file = json.load(token_file)
 res = post('https://accounts.spotify.com/api/token', headers = {'Authorization': '{}'.format(token_file["token"])}, data= {'grant_type': 'client_credentials'})
 token = 'Bearer {}'.format(res.json()['access_token'])
