@@ -13,7 +13,7 @@ def hello():
 
 class Prediction(Resource):
     def get(self, songname):
-        
+        output = songname + "hihi"
         return output
 
 class haha(Resource):
