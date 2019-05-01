@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_restful import Api, Resource
+from flask_restful import Api, Resource, request
 from flask_jsonpify import jsonify
 
 app = Flask(__name__)
@@ -11,7 +11,8 @@ def hello():
 
 class Prediction(Resource):
     def get(self):
-        return {"Probability of hit":"0.71"}
+    	args = request.args #retrieve args from query string
+        return args
 
 class haha(Resource):
     def get(self):
