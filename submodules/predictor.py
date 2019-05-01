@@ -1,5 +1,5 @@
 import pickle, re
-from retrieve_song import get_song_id, get_song_features
+from submodules.retrieve_song import get_song_id, get_song_features
 
 
 def predict_popularity(songname):
