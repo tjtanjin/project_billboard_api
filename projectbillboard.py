@@ -10,8 +10,7 @@ def hello():
     return "Test"
 
 class Prediction(Resource):
-    def get(self):
-        songname = request.args.get('songname')
+    def get(self, songname):
         return songname
 
 class haha(Resource):
