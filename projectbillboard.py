@@ -11,7 +11,8 @@ def hello():
 
 class Prediction(Resource):
     def get(self, songname):
-        return songname
+        check_type = type(songname)
+        return check_type
 
 class haha(Resource):
     def get(self):
