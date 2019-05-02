@@ -15,7 +15,7 @@ def hello():
 class Prediction(Resource):
     def get(self, songname):
         popularity = predict_popularity(songname)
-        return popularity
+        return {"popularity": popularity}
 
 class haha(Resource):
     def get(self):
