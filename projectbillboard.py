@@ -8,9 +8,9 @@ app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
-@app.route('/')
-def hello():
-    return "Test"
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return render_template('test.html')
 
 class Prediction(Resource):
     def get(self, songname):
