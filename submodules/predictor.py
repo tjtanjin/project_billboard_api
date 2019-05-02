@@ -8,5 +8,6 @@ def predict_popularity(songname):
 	song_features = get_song_features(songid)
 	loaded_model = pickle.load(open("./models/model3", "rb"))
 	prediction = loaded_model.predict_proba(song_features.iloc[0])
+	prediction = round(prediction[0][1], 2)
 	
-	return str(prediction[0][1])
+	return str(prediction)
