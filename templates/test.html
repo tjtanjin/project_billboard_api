@@ -15,10 +15,11 @@
         evt.preventDefault();
         console.log("main button is clicked");
         var songName = $('#text_box')[0].value;
+        var model = document.querySelector('input[name="model_selection"]:checked').value;
         // get request
         $.ajax({
           // put your api endpoint here
-          url: 'https://project-billboard-api.herokuapp.com/predict/'+songName,
+          url: 'https://project-billboard-api.herokuapp.com/predict/'+songName+'/'+model,
           // function callback after success ajax request
           success: function(data) {
             console.log(data)
@@ -107,6 +108,23 @@
     <p id="predict_result" style="color:blue;"></p>
   </div>
   <div class="container">
+  <!-- Group of default radios - logistic regression -->
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input" id="logistic_regression_model" name="model_selection" value="logistic_regression">
+    <label class="custom-control-label" for="logistic_regression_model">Logistic Regression Model</label>
+  </div>
+
+  <!-- Group of default radios - k nearest neighbours -->
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input" id="knn_model" name="model_selection" value="knn">
+    <label class="custom-control-label" for="knn_model">K Nearest Neighbours Model</label>
+  </div>
+
+  <!-- Group of default radios - xgboost -->
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input" id="xgboost_model" name="model_selection" value="xgboost" checked>
+    <label class="custom-control-label" for="xgboost_model">XGBoost Model</label>
+  </div>
 
       <div class="row">
 
