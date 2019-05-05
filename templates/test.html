@@ -15,7 +15,7 @@
         evt.preventDefault();
         console.log("main button is clicked");
         var songName = $('#text_box')[0].value;
-        var model = document.querySelector('input[name="model_selection"]:checked').value;
+        var model = $("input[name='model_selection']:checked").val();
         // get request
         $.ajax({
           // put your api endpoint here
