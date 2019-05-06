@@ -13,7 +13,9 @@ def index():
     return render_template('test.html')
 
 class Prediction(Resource):
-    def get(self, songname, model):
+    def post(self, songname):
+        data = request.get_json()
+        model = data["chosen_model"]
         popularity = predict_popularity(songname, model)
         return {"popularity": popularity}
 
@@ -21,7 +23,7 @@ class haha(Resource):
     def get(self):
         return {"hehe":"hoho"}
 
-api.add_resource(Prediction, '/predict/<songname>/<model>')
+api.add_resource(Prediction, '/predict/<songname>')
 api.add_resource(haha, '/laugh')
 
 if __name__ == '__main__':
