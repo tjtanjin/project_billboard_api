@@ -10,7 +10,7 @@ CORS(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('test.html')
+    return render_template('index.html')
 
 class Prediction(Resource):
     def post(self, songname):
