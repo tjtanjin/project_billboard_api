@@ -28,5 +28,23 @@ $(document).ready(function() {
         },
       });
 
+    }); 
+    $('#nav_models').click(function(evt) {
+        evt.preventDefault();
+      $('html, body').animate({
+        scrollTop: ($('#models').offset().top)
+      },700);
+    });
+    $('#nav_about').click(function(evt) {
+        evt.preventDefault();
+      $('html, body').animate({
+        scrollTop: ($('#about').offset().top)
+      },700);
+    });
+    $('#nav_team').click(function(evt) {
+        evt.preventDefault();
+      $('html, body').animate({
+        scrollTop: ($('#team').offset().top)
+      },700);
     });
 });
