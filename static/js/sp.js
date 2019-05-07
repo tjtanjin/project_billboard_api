@@ -32,7 +32,7 @@ $(document).ready(function() {
     $('#nav_home').click(function(evt) {
         evt.preventDefault();
       $('html, body').animate({
-        scrollTop: ($('#').offset().top)
+        scrollTop: 0
       },700);
     });
     $('#nav_models').click(function(evt) {
