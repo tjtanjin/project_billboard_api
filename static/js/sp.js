@@ -24,7 +24,7 @@ $(document).ready(function() {
     // get request
     $.ajax({
       // put your api endpoint here
-      url: 'https://project-billboard-api.herokuapp.com/predict/'+songName,
+      url: 'https://project-billboard-api.herokuapp.com/api/v1/predict/'+songName,
       type: "POST",
       data: JSON.stringify(data),
       dataType: "json",
