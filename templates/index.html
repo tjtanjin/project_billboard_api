@@ -102,7 +102,7 @@
           </span>
           <h4 class="service-heading">Logistic Regression</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+          <button class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#logistic_regression_details">Learn more &raquo;</button>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -111,7 +111,7 @@
           </span>
           <h4 class="service-heading">K Nearest Neighbours</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+          <button class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#knn_details">Learn more &raquo;</button>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -120,7 +120,7 @@
           </span>
           <h4 class="service-heading">XGBoost</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+          <button class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#xgboost_details">Learn more &raquo;</button>
         </div>
       </div>
     </div>
@@ -297,5 +297,65 @@
       </div>
     </div>
   </section>
+
+  <!-- Logistic Regression Details Modal -->
+  <div class="modal fade" id="logistic_regression_details" tabindex="-1" role="dialog" aria-labelledby="Logistic Regression Details" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Logistic Regression Model</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Logistic Regression writeup
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left:auto; margin-right:auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- K Nearest Neighbours Details Modal -->
+  <div class="modal fade" id="knn_details" tabindex="-1" role="dialog" aria-labelledby="KNN Details" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">K Nearest Neighbours Model</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          KNN writeup
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left:auto; margin-right:auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- XGBoost Details Modal -->
+  <div class="modal fade" id="xgboost_details" tabindex="-1" role="dialog" aria-labelledby="XGBoost Details" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">XGBoost Model</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          XGBoost writeup
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left:auto; margin-right:auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
