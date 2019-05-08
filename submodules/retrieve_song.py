@@ -12,16 +12,14 @@ headers = {'Authorization': token, "Accept": 'application/json', 'Content-Type':
 
 def get_song_id(songname):
     """
-    Function to get song ids and song popularity from song names.
+    Function to get song id from song name.
     Args:
-        track_namelist: list of all song names
-        track_artistlist: list of all song artists (currently not used to query)
+        songname: name of the song to predict
     """
-    #to store track ids and popularity
-
-    #search and retrieve track ids and popularity
+    #search and retrieve track id
     url = "https://api.spotify.com/v1/search?q={}&type=track".format(songname)
     res = get(url, headers = headers)
+    #reject if unable to find song id
     try:
         res = res.json()['tracks']['items'][0]
         songid = res['id']
@@ -31,6 +29,12 @@ def get_song_id(songname):
     return songid
 
 def get_song_features(songid):
+    """
+    Function to get song features from specified song.
+    Args:
+        songid: id of the song to predict
+    """
+    #retrieve features and place into dataframe
     song_features = pd.DataFrame(columns=["duration", "loudness", "tempo", "time_signature", "key", "mode", 
     "acousticness", "danceability", "energy", "instrumentalness", "liveness", "speechiness", "valence"])
     url="https://api.spotify.com/v1/audio-analysis/{}".format(songid)

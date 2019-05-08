@@ -14,8 +14,15 @@ def index():
 
 class Prediction(Resource):
     def post(self, songname):
+        """
+        Handles post request for prediction results.
+        Args:
+            songname: name of the song to predict
+        """
+        #determine model chosen by user
         data = request.get_json()
         model = data["chosen_model"]
+        #predict popularity based on song name and model
         popularity = predict_popularity(songname, model)
         if popularity == "Unable to find specified song.":
         	return {"success:": "False", "popularity": "NAN"}
@@ -24,6 +31,11 @@ class Prediction(Resource):
 
 class haha(Resource):
     def get(self):
+        """
+        Test function.
+        Args:
+            None
+        """
         return {"hehe":"hoho"}
 
 api.add_resource(Prediction, '/api/v1/predict/<songname>')
