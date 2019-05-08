@@ -62,6 +62,7 @@ $(document).ready(function() {
   document.getElementById('text_box').addEventListener('keypress', function(event) {
     if (event.keyCode == 13) {
       event.preventDefault();
+      document.getElementById("main_button").click();
     }
   });
   $('#nav_home').click(function(evt) {
