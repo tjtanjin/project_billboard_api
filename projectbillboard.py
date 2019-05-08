@@ -17,7 +17,10 @@ class Prediction(Resource):
         data = request.get_json()
         model = data["chosen_model"]
         popularity = predict_popularity(songname, model)
-        return {"popularity": popularity}
+        if popularity == "Unable to find specified song.":
+        	return {"success:": "False", "results":{"popularity": "NAN"}}
+        else:
+        	return {"success": "True", "results"{"popularity": popularity}}
 
 class haha(Resource):
     def get(self):
