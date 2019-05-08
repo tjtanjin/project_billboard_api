@@ -32,7 +32,7 @@ $(document).ready(function() {
       }
       $.ajax({
         // put your api endpoint here
-        url: 'https://project-billboard.herokuapp.com/api/v1/predict/'+songName,
+        url: './api/v1/predict/'+songName,
         type: "POST",
         data: JSON.stringify(data),
         dataType: "json",
@@ -41,13 +41,13 @@ $(document).ready(function() {
         success: function(data) {
           console.log(data)
           $this.html($this.data('Predict'));
-          if (data["result"]["popularity"] == "NAN") {
-          	document.getElementById("predict_result").style.backgroundColor = "rgb(100,100,100,0.8)"
-      		document.getElementById("predict_result").innerHTML = "Sorry, your requested song cannot be found.";
-          } else {
-          document.getElementById("predict_result").style.backgroundColor = "rgb(100,100,100,0.8)";
-          document.getElementById("predict_result").innerHTML = "The probability of "+songName+" being a hit song is: "+data["result"]["popularity"];
           $('#text_box')[0].value = "";
+          if (data["popularity"] == "NAN") {
+          	document.getElementById("predict_result").style.backgroundColor = "rgb(100,100,100,0.8)"
+      		  document.getElementById("predict_result").innerHTML = "Sorry, your requested song cannot be found.";
+          } else {
+            document.getElementById("predict_result").style.backgroundColor = "rgb(100,100,100,0.8)";
+            document.getElementById("predict_result").innerHTML = "The probability of "+songName+" being a hit song is: "+data["popularity"];
       	  }
         },
         error: function(error) {
