@@ -9,7 +9,7 @@ def predict_popularity(songname, model):
 		return "Unable to find specified song."
 	song_features = get_song_features(songid)
 	if model == "xgboost":
-		loaded_model = pickle.load(open("./models/model3", "rb"))
+		loaded_model = pickle.load(open("./models/xgboost_model", "rb"))
 		prediction = loaded_model.predict_proba(song_features.iloc[0])
 		prediction = round(prediction[0][1], 2)
 	
