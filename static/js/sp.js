@@ -59,6 +59,11 @@ $(document).ready(function() {
       document.getElementById("predict_result").innerHTML = "Please key in a song name!";
     }
   }); 
+  document.getElementById('text_box').addEventListener('keypress', function(event) {
+    if (event.keyCode == 13) {
+      event.preventDefault();
+    }
+  });
   $('#nav_home').click(function(evt) {
       evt.preventDefault();
     $('html, body').animate({
