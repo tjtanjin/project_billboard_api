@@ -69,7 +69,7 @@
             <div class="input-group input-group-sm mb-3">
               <div class="input-group-prepend">
               </div>
-            <textarea class="form-control rounded-3" id="text_box" autofocus="autofocus" placeholder="Enter Song Name & Choose Model ->" style="height:30px;"aria-label="Enter Song Name"></textarea>
+            <textarea class="form-control rounded-3" id="text_box" placeholder="Enter Song Name & Choose Model ->" style="height:30px;"aria-label="Enter Song Name"></textarea>
             <select id="model_selection">
               <option value="logistic_regression">Logistic Regression</option>
               <option value="knn">K Nearest Neighbours</option>
@@ -147,7 +147,10 @@
                   <h4 class="subheading">Beginning of Project...</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">The “Project Billboard” team comprising Chionh Hwai Teck (Arthur), Tan Jin and Toh Yue Feng was assembled and briefed:
+
+                  "Music is an undeniable part of our lives - we listen to music during commute, work, or even during the late sad hours in the morning. The best ones end up in the Billboard 200 chart, but here's a central question: is there a method to this madness that is being a chart-topper? 
+                  </p>
                 </div>
               </div>
             </li>
@@ -158,10 +161,14 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>18th April 2019</h4>
-                  <h4 class="subheading">Song scraping...</h4>
+                  <h4 class="subheading">Exploring possibilities...</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Over dinner and drinks at Starbucks, intense conversation allowed the team to compose a game-plan:
+                  
+                  Spotify’s Application Programming Interfaces’ (APIs) accessibility and wealth of data easily convinced the team to use it for the project. Tasks at the end of the meeting included generating a list of songs from Spotify APIs and classifying if they were “hits” or
+                  “misses”, tracking songs’ performance on Billboard and creating a GitHub repository.
+                  </p>
                 </div>
               </div>
             </li>
@@ -172,10 +179,13 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>29th April 2019</h4>
-                  <h4 class="subheading">Analysis of features...</h4>
+                  <h4 class="subheading">Song extraction and analysis...</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">The project hits a high note. Functions and for loops were coded to suck 4900+ songs from Spotify APIs, complete with information e.g. duration and features e.g. danceability. Care was also taken to ensure songs were not duplicated. With data in hand, the team was ready to go fortissimo with machine learning (e.g. Linear Regression, K Nearest Neighbors, XGBoost) and feature selection.
+
+                  At this point Jackie Tan, mastermind behind projects like this, was chiming in the Telegram chorus with advice and encouragement. Cheers to Jackie for starting the project and seeing it through with the team! 
+                  </p>
                 </div>
               </div>
             </li>
@@ -189,15 +199,25 @@
                   <h4 class="subheading">Training of models...</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Certain machine learning models proved promising, with prediction accuracies ranging from 60% to 70%. The project was striking the right notes, with the team having established models and the dataset.</p>
                 </div>
               </div>
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <h4>Be Part
-                  <br>Of Our
-                  <br>Story!</h4>
+                <img class="rounded-circle img-fluid" src="img/about/5.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>11th May 2019</h4>
+                  <h4 class="subheading">Product complete...</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">The team submitted its masterpiece for Project Billboard. Everything you see here was made for this. Every song you hear can be predicted (accurately) by this...hopefully (:
+
+                  Many hymns of praise for Dan, not just for his major contributions to the project but to our futures as aspiring coders too!
+                  </p>
+                </div>
               </div>
             </li>
           </ul>
@@ -323,7 +343,9 @@
           </button>
         </div>
         <div class="modal-body">
-          KNN writeup
+          Input: Continuous variables
+          Output: Discrete classification
+          Brief Description: To classify a point A, its n nearest neighbors are found by calculating the “distances” (e.g. Euclidean) it has from other points. Nearest neighbors are points with the smallest “distances” from A. The classifications of these n nearest neighbors determine the classification of A.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left:auto; margin-right:auto;">Close</button>
