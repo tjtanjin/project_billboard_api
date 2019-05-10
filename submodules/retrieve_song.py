@@ -53,6 +53,6 @@ def get_song_features(songid, songpop):
     song_features = song_features.append({"duration": ar["duration"], "loudness": ar["loudness"], "tempo": ar["tempo"],
                                            "time_signature": ar["time_signature"], "key": ar["key"], "mode": ar["mode"],
                                            "acousticness": fr["acousticness"], "danceability": fr["danceability"], "energy": fr["energy"], "instrumentalness": fr["instrumentalness"], 
-                                           "liveness": fr["liveness"], "speechiness": fr["speechiness"], "valence": fr["valence"], songpop}, ignore_index = True)
+                                           "liveness": fr["liveness"], "speechiness": fr["speechiness"], "valence": fr["valence"], "popularity": songpop}, ignore_index = True)
 
     return song_features
