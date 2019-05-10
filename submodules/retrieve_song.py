@@ -23,20 +23,22 @@ def get_song_id(songname):
     try:
         res = res.json()['tracks']['items'][0]
         songid = res['id']
+        songpop = res['popularity']
     except:
         return "Unable to find specified song."
 
-    return songid
+    return songid, songpop
 
-def get_song_features(songid):
+def get_song_features(songid, songpop):
     """
     Function to get song features from specified song.
     Args:
         songid: id of the song to predict
+        songpop: spotify popularity of song
     """
     #retrieve features and place into dataframe
     song_features = pd.DataFrame(columns=["duration", "loudness", "tempo", "time_signature", "key", "mode", 
-    "acousticness", "danceability", "energy", "instrumentalness", "liveness", "speechiness", "valence"])
+    "acousticness", "danceability", "energy", "instrumentalness", "liveness", "speechiness", "valence", "popularity"])
     url="https://api.spotify.com/v1/audio-analysis/{}".format(songid)
     ar=get(url, headers=headers)
     while "track" not in ar.json():
@@ -51,6 +53,6 @@ def get_song_features(songid):
     song_features = song_features.append({"duration": ar["duration"], "loudness": ar["loudness"], "tempo": ar["tempo"],
                                            "time_signature": ar["time_signature"], "key": ar["key"], "mode": ar["mode"],
                                            "acousticness": fr["acousticness"], "danceability": fr["danceability"], "energy": fr["energy"], "instrumentalness": fr["instrumentalness"], 
-                                           "liveness": fr["liveness"], "speechiness": fr["speechiness"], "valence": fr["valence"]}, ignore_index = True)
+                                           "liveness": fr["liveness"], "speechiness": fr["speechiness"], "valence": fr["valence"], songpop}, ignore_index = True)
 
     return song_features
