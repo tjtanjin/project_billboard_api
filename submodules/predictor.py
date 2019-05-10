@@ -21,5 +21,9 @@ def predict_popularity(songname, model):
 		loaded_model = pickle.load(open("./models/xgboost_model", "rb"))
 		prediction = loaded_model.predict_proba(song_features.iloc[0])
 		prediction = round(prediction[0][1], 2)
+	elif model == "knn":
+		loaded_model = pickle.load(open("./models/knn", "rb"))
+		prediction = loaded_model.predict_proba(song_features.iloc[0])
+		prediction = round(prediction[0][1], 2)
 	
 	return str(prediction)
