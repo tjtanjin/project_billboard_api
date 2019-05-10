@@ -83,6 +83,12 @@ $(document).ready(function() {
       scrollTop: ($('#about').offset().top)
     },700);
   });
+  $('#nav_timeline').click(function(evt) {
+      evt.preventDefault();
+    $('html, body').animate({
+      scrollTop: ($('#timeline').offset().top)
+    },700);
+  });
   $('#nav_team').click(function(evt) {
       evt.preventDefault();
     $('html, body').animate({
