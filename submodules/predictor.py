@@ -10,12 +10,13 @@ def predict_popularity(songname, model):
 		model: model to use for prediction
 	"""
 	#retrieve song id of specified song on spotify
-	songid = get_song_id(songname)
+	songid, songpop = get_song_id(songname)
+	print(songpop)
 	#reject if unable to find song
 	if songid == "Unable to find specified song.":
 		return "Unable to find specified song."
 	#extract song features based on song id
-	song_features = get_song_features(songid)
+	song_features = get_song_features(songid, model)
 	#predict based on model and return predictions
 	if model == "xgboost":
 		loaded_model = pickle.load(open("./models/xgboost_model", "rb"))
