@@ -1,2 +1,4 @@
-To be updated...
-Arthur test.
+# Project Billboard API
+Project billboard API is an extension of Project billboard whose objective is to produce a model that is capable of predicting the potential of a song to be a billboard hit. This repository contains the work done for our frontend and API used to host our song prediction models online.
+
+Note: The project billboard api repository contains work strictly pertaining to our frontend and API for hosting our models. For the repository that contains our work on model training, please refer to the project billboard model repository: https://github.com/tjtanjin/project_billboard_model
