@@ -75,7 +75,7 @@
             <textarea class="form-control rounded-3" id="text_box" placeholder="Enter Song Name & Choose Model ->" style="height:30px;"aria-label="Enter Song Name"></textarea>
             <select id="model_selection">
               <option value="logistic_regression">Logistic Regression</option>
-              <option value="knn">K Nearest Neighbours</option>
+              <option value="knn">K Nearest Neighbors</option>
               <option value="xgboost" selected="selected">XGBoost</option>
             </select>
             </div>
@@ -103,7 +103,7 @@
             <i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Logistic Regression</h4>
-          <p class="text-muted"><!--can add text here--></p>
+          <p class="text-muted">Accuracy: 65.2%</p>
           <button class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#logistic_regression_details">Learn more &raquo;</button>
         </div>
         <div class="col-md-4" style="height:405px;">
@@ -111,8 +111,8 @@
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fab fa-hubspot fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">K Nearest Neighbours</h4>
-          <p class="text-muted"><!--can add text here--></p>
+          <h4 class="service-heading">K Nearest Neighbors</h4>
+          <p class="text-muted">Accuracy: 61.2%</p>
           <button class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#knn_details">Learn more &raquo;</button>
         </div>
         <div class="col-md-4" style="height:405px;">
@@ -121,7 +121,7 @@
             <i class="fas fa-rocket fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">XGBoost</h4>
-          <p class="text-muted"><!--can add text here--></p>
+          <p class="text-muted">Accuracy: 68.7%</p>
           <button class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#xgboost_details">Learn more &raquo;</button>
         </div>
       </div>
@@ -166,7 +166,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Timeline</h2>
-          <h3 class="section-subheading text-muted"><!--can add text here--></h3>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
       <div class="row">
@@ -174,7 +174,7 @@
           <ul class="timeline">
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/timeline/1.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/1.png" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -189,7 +189,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/timeline/2.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/2.png" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -204,7 +204,7 @@
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/timeline/3.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/3.png" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -219,7 +219,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/timeline/4.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/4.png" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -234,7 +234,7 @@
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/timeline/5.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/5.png" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -350,8 +350,9 @@
           </button>
         </div>
         <div class="modal-body">
-          Independent variables → dependent binary result<br/>
-          To predict the probability of a binary occurence using methods such as logit function and Maximum Likelihood Estimation (MLE).
+          <p>Logistic Regression is commonly used to solve various classification problems such as spam detection.</p>
+          <p>It is one of the most simple machine learning algorithms for two-class classification. While linear regression gives a continuous output (housing prices), logistic regression provides a discrete output (whether a patient has cancer or not).</p>
+          <p>Aside from its easy implementation, it is also efficient and does not require high computational power. However, logistic regression does not do well with a large number of features and also has a tendency to overfit.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left:auto; margin-right:auto;">Close</button>
@@ -360,20 +361,20 @@
     </div>
   </div>
 
-  <!-- K Nearest Neighbours Details Modal -->
+  <!-- K Nearest Neighbors Details Modal -->
   <div class="modal fade" id="knn_details" tabindex="-1" role="dialog" aria-labelledby="KNN Details" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header" style="background-color:rgb(0,0,0, 0.8);">
-          <h5 class="modal-title" style="color:#EE82EE;">K Nearest Neighbours Model</h5>
+          <h5 class="modal-title" style="color:#EE82EE;">K Nearest Neighbors Model</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#EE82EE; opacity:0.8;">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Input: Continuous variables <br/>
-          Output: Discrete classification <br/>
-          Brief Description: To classify a point A, its n nearest neighbors are found by calculating the “distances” (e.g. Euclidean) it has from other points. Nearest neighbors are points with the smallest “distances” from A. The classifications of these n nearest neighbors determine the classification of A.
+          <p>K Nearest Neighbors is a supervised machine learning algorithm that is commonly used to solve classification problems.</p>
+          <p>For this algorithm, a key assumption made is that similar things exist in close proximity. By calculating the distances between various data points, the model will attempt to predict the class of a new data point based on its proximity to other points.</p>
+          <p>The advantage to such an approach is that it is simple to implement with little need for us to tune any parameters. However, the algorithm gets significantly slower with increasing number of features used in the model.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left:auto; margin-right:auto;">Close</button>
@@ -393,7 +394,9 @@
           </button>
         </div>
         <div class="modal-body">
-            To implement gradient boosting machines such as stochastic gradient boosting and regularized gradient boosting.<br/>
+          <p>XGBoost(eXtreme Gradient Boosting) is a decision-tree-based ensemble machine learning algorithm that uses a gradient boosting framework.</p>
+          <p>Designed for speed and performance, it has become a widely used and really popular tool among Kaggle competitors and Data Scientists in industry. XGBoost uses an ensemble method that seeks to create a strong classifier (model) based on “weak” classifiers. Models are added on top of each other iteratively and the errors of the previous model are then corrected by the next predictor.</p>
+          <p>However, as a tradeoff to its laudable efficiency and performance, it is significantly harder to tune than other models due to the many hyperparameters and is susceptibie to overfitting.</p>
         </div>
         <div class="modal-footer text-center">
           <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left:auto; margin-right:auto;">Close</button>
@@ -407,7 +410,7 @@
     <div class="container bg-light">
       <div class="row">
         <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Project Billboard 2019. Powered by Heroku.</span>
+          <span class="copyright">Copyright &copy; Project Billboard 2019<br/>Powered by Flask & Gunicorn</span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
