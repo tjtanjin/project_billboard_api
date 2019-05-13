@@ -65,6 +65,12 @@ $(document).ready(function() {
       document.getElementById("main_button").click();
     }
   });
+  $('#nav_title').click(function(evt) {
+      evt.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    },700);
+  });
   $('#nav_home').click(function(evt) {
       evt.preventDefault();
     $('html, body').animate({
