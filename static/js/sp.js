@@ -47,7 +47,7 @@ $(document).ready(function() {
       		  document.getElementById("predict_result").innerHTML = "Sorry, your requested song cannot be found.";
           } else {
             document.getElementById("predict_result").style.backgroundColor = "rgb(100,100,100,0.8)";
-            document.getElementById("predict_result").innerHTML = "The probability of "+songName+" being a hit song is: "+data["popularity"];
+            document.getElementById("predict_result").innerHTML = songName+" has a "+data['popularity']*100+"% chance of being a billboard hit!";
       	  }
         },
         error: function(error) {
