@@ -25,7 +25,7 @@ def get_song_id(songname):
         songid = res['id']
         songpop = res['popularity']
     except:
-        return "Unable to find specified song."
+        return "Unable to find specified song.", ""
 
     return songid, songpop
 
