@@ -83,7 +83,7 @@ https://github.com/tjtanjin/project_billboard_api
 The following section will guide you through setting up your own Project Billboard API!
 * As this project is hosted on heroku, it would be easier to fork this repository instead of cloning it locally so as to facilitate easier automatic deploys later on in the guide. However, if you wish to clone this repository, go ahead and cd to where you wish to store the project and clone it as shown in the example below:
 ```
-$ cd home/user/exampleuser/projects/
+$ cd /home/user/exampleuser/projects/
 $ git clone https://github.com/tjtanjin/project_billboard_api.git
 ```
 * Next, you will need to obtain a [spotify token](https://developer.spotify.com/documentation/general/guides/authorization-guide/) and create a new application on [heroku](https://dashboard.heroku.com/).
